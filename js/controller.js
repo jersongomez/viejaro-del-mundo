@@ -62,8 +62,11 @@ $(document).ready(function () {
                 processData: true,
                 success: function (respuesta) {
                     if (respuesta.codigo == 200) {
+                        $("#errors").children("div").removeClass("alert-danger alert-danger-viajeros").addClass("btn-enviar sussess-confirmation").html("Registro Exitoso!");
                     } else {
+                        $("#errors").children("div").removeClass("btn-enviar sussess-confirmation").addClass("alert-danger alert-danger-viajeros").html("Error en registro!");
                     }
+                    $("#errors").removeClass("hide");
                 },
                 type: "POST"
             });
