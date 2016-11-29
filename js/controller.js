@@ -33,7 +33,7 @@ $(document).ready(function () {
 
         },
         showErrors: function (errorMap, errorList) {
-            $("#errors").removeClass("hide");
+            $("#errors").addClass("hide");
             var brk = false;
             $.each(errorList, function (i, o) {
                 if (brk) {
@@ -41,6 +41,7 @@ $(document).ready(function () {
                 }
                 brk = true;
                 $("#sperror").html(this.message);
+                $("#errors").removeClass("hide");
             });
         },
         success: function (label, element) {
