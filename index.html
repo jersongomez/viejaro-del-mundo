@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Multivacaciones, el programa vacaciones de Hoteles Decameron, te invita a participar en el concurso Viajero del Mundo">
-        <meta name="keyword" content="multivacaciones, hoteles decameron, concurso,  Viajero del Mundo, paris, roma, el cairo, buenos aires, cancun, londres, nueva york, rio de janeiro, multivacaciones decameron, decameron, gana, viaje.">
+        <meta name="keywords" content="multivacaciones, hoteles decameron, concurso,  Viajero del Mundo, paris, roma, el cairo, buenos aires, cancun, londres, nueva york, rio de janeiro, multivacaciones decameron, decameron, gana, viaje.">
         <meta name="author" content="Multivacaciones Decameron de Hoteles Decameron Colombia S.A.S">
 
         <title>Viajero del Mundo - Multivacaciones Decameron</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-
+        <link href="css/jquery-ui.css" rel="stylesheet">
         <!-- Custom CSS -->
         <link href="css/full-slider.css" rel="stylesheet">
 
@@ -24,23 +22,30 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/estilos.css">
         <link href="https://fonts.googleapis.com/css?family=Anton|PT+Sans+Narrow" rel="stylesheet">
     </head>
 
     <body>
+        <div class="loader">
+            <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+        </div>
+        <div class="loader-msg">
+            <span>Estamos procesando tus datos ...</span>
+        </div>
         <!-- Full Page Image Background Carousel Header -->
         <header  id="myCarousel" class="carousel slide">
             <!-- Indicators -->
             <ol class="carousel-indicators elevar">
-                <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
                 <li data-target="#myCarousel" data-slide-to="3"></li>
                 <li data-target="#myCarousel" data-slide-to="4"></li>
                 <li data-target="#myCarousel" data-slide-to="5"></li>
                 <li data-target="#myCarousel" data-slide-to="6"></li>
                 <li data-target="#myCarousel" data-slide-to="7"></li>
-                <li data-target="#myCarousel" data-slide-to="8"></li>
             </ol>
 
             <!-- Wrapper for Slides -->
@@ -49,7 +54,7 @@
                     <!-- Set the first background image using inline CSS below. -->
                     <div class="fill" style="background-image:url('img/1-paris.jpg');"></div>
                     <div class="carousel-caption">
-                        <h2 class="txt-caption">París</h2>
+                        <h2 class="txt-caption">Par&iacute;s</h2>
                     </div>
                 </div>
                 <div class="item">
@@ -77,7 +82,7 @@
                     <!-- Set the third background image using inline CSS below. -->
                     <div class="fill" style="background-image:url('img/5-cancun.jpg');"></div>
                     <div class="carousel-caption">
-                        <h2 class="txt-caption">Cancún</h2>
+                        <h2 class="txt-caption">Canc&uacute;n</h2>
                     </div>
                 </div>
                 <div class="item">
@@ -98,7 +103,7 @@
                     <!-- Set the third background image using inline CSS below. -->
                     <div class="fill" style="background-image:url('img/8-rio-de-janeiro.jpg');"></div>
                     <div class="carousel-caption">
-                        <h2 class="txt-caption">Río de Janeiro</h2>
+                        <h2 class="txt-caption">R&iacute;o de Janeiro</h2>
                     </div>
                 </div>
             </div>
@@ -111,106 +116,115 @@
                 <span class="icon-next"></span>
             </a>
         </header>
-        <div>
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1 col-xs-12 position-absoluta-txt">
-                    <div class="col-md-5 col-xs-12" style="top:0px;">
-                        <img class="logo-multivacaciones" src="img/multivacaciones-decameron.png" />
-                        <h1 class="txt-amarillo-mensaje">Te invita a viajar por el mundo.</h1>
-                        <h2 class="txt-blanco-mensaje">Elige uno de estos</h2>
-                        <h3 class="txt-amarillo-mensaje-2">8 destinos</h3>
-                        <h4 class="txt-destinos">París - Roma - El Cairo - Buenos Aires <br/> Cancún - Londres - Nueva York - Río de Janeiro</h4>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-12 position-absoluta-txt">
+                <div class="col-md-5 col-xs-12" style="top:0px;">
+                    <a href="http://www.multivacaciones.com.co/site/index.php/" target="_blank">
+                        <img class="logo-multivacaciones" src="img/multivacaciones-decameron2.svg">
+                    </a>
+                    <h1 class="txt-amarillo-mensaje">Te invita a viajar por el mundo.</h1>
+                    <h2 class="txt-blanco-mensaje">Elige uno de estos</h2>
+                    <h3 class="txt-amarillo-mensaje-2">8 destinos</h3>
+                    <h4 class="txt-destinos">Par&iacute;s - Roma - El Cairo - Buenos Aires <br/> Canc&uacute;n - Londres - Nueva York - R&iacute;o de Janeiro</h4>
 
-                    </div>
                 </div>
-                <div>
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1 col-xs-12 position-absoluta-form">
-                            <div class="col-md-6 col-md-offset-6 col-xs-12">
-                                <div class="text-center visible-xs">
-                                    <img src="img/bajar-scroll.svg" class="ani-scroll" id="botonFlecha" />
-                                </div>
-                                <form  class="background-form" id="frmDatos">
-                                    <input type="hidden" name="campaign" value="1" />
-                                    <input type="hidden" name="sigla" value="CO" />
-                                    <div class="text-center" id="contenido">
-                                        <img class="logo-viajero" src="img/logo-viajero-del-mundo-3.png"/>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <h4 class="txt-amarillo-form"> Déjanos tus datos para que un asesor se contacte contigo y te explique cómo puedes participar</h4>
-                                    </div>
-                                    <div class="col-md-12 nopadding hide" id="errors">
-                                        <div class="alert alert-danger alert-danger-viajeros text-center" role="alert">
-                                            <p><strong styel="font-height">¡OOPS!</strong><br/> Por favor diligencie todos los campos ( <span id="sperror"></span> ).</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 nopadding">
-                                        <p class="txt-obligatorios">* Campos Obligatorios</p>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="">
-                                            <input type="text" class="form-control form-control-landing" name="nombre" id="nombre" placeholder="* Nombre">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="">
-                                            <input type="text" class="form-control form-control-landing" name="apellido" id="apellido" placeholder="* Apellido">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="">
-                                            <input type="text" class="form-control form-control-landing" name="documento" id="documento" placeholder="* Cédula">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="">
-                                            <input type="text" class="form-control form-control-landing" name="telefono" id="telefono" placeholder="* Teléfono Domicilio">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="">
-                                            <input type="text" class="form-control form-control-landing" name="movil" id="movil" placeholder="* Teléfono Celular">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="">
-                                            <input type="text" class="form-control form-control-landing" name="email" id="email" placeholder="* Correo Electrónico">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="checkbox">
-                                            <label>
-                                                <p class="txt-checkbox"> <input type="checkbox" name="condiciones" id="condiciones" class="required"> Estoy de acuerdo con los <a href="http://www.multivacaciones.com.co/site/index.php/terminos-y-condiciones-concurso-viajero-del-mundo" target="_blank"> términos y condiciones de este concurso </a> y la <a href="http://www.multivacaciones.com.co/site/index.php/politica-de-privacidad-concurso-viajero-del-mundo" target="_blank"> política de tratamiento de datos</a> de Hoteles Decameron Colombia S.A.S. </p>
-                                            </label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label>
-                                                <p class="txt-checkbox"> <input type="checkbox"  name="mayoredad" id="mayoredad" class="required"> Certifico que soy mayor de edad, los datos que he suministrado son verídicos y de mi propiedad. </p><!-- , adicional, he leído los <a href="http://www.multivacaciones.com.co/site/index.php/terminos-y-condiciones-concurso-viajero-del-mundo" target="_blank"> términos y condiciones de este concurso </a>, estoy de acuerdo con ellos y cumplo con todas las condiciones para participar. -->
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <button type="submit" style="border:none;" class="btn-enviar">ENVIAR</a></button>
-                                </form>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-xs-12 position-absoluta-form">
+                        <div class="col-md-6 col-md-offset-6 col-xs-12">
+                            <div class="text-center visible-xs">
+                                <img src="img/bajar-scroll.svg" class="ani-scroll" id="botonFlecha" />
                             </div>
+                            <form  class="background-form" id="frmDatos">
+                                <input type="hidden" name="campaign" value="1" />
+                                <input type="hidden" name="sigla" value="CO" />
+                                <div class="text-center" id="contenido">
+                                    <img class="logo-viajero" src="img/logo-viajero-del-mundo-3.png"/>
+                                </div>
+                                <div class="col-md-12">
+                                    <h4 class="txt-amarillo-form"> D&eacute;janos tus datos para que un asesor se contacte contigo y te explique c&oacute;mo puedes participar</h4>
+                                </div>
+                                <div class="col-md-12 nopadding hide" id="errors">
+                                    <div class="alert alert-danger alert-danger-viajeros text-center" role="alert">
+                                        <p>
+                                            <strong style="font-height">&iexcl;OOPS!</strong>
+                                            <br/><span id="sperror"></span>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 nopadding">
+                                    <p class="txt-obligatorios">* Campos Obligatorios</p>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <input type="text" class="form-control form-control-landing" name="nombre" id="nombre" placeholder="* Nombre">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <input type="text" class="form-control form-control-landing" name="apellido" id="apellido" placeholder="* Apellido">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <input type="text" class="form-control form-control-landing" name="documento" id="documento" placeholder="* C&eacute;dula">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-12 col-xs-12 nopadding" style="margin-bottom: 15px;">
+                                        <input type="text" class="form-control form-control-landing" name="ciudad" id="ciudad" placeholder="* Ciudad">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-sm-12 col-xs-12 nopadding" style="margin-bottom: 15px;">
+                                        <input type="text" class="form-control form-control-landing" name="telefono" id="telefono" placeholder="* Tel&eacute;fono Domicilio" maxlength="7">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="">
+                                        <input type="text" class="form-control form-control-landing" name="mobile" id="mobile" placeholder="* Tel&eacute;fono Celular" maxlength="10">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <input type="text" class="form-control form-control-landing" name="email" id="email" placeholder="* Correo Electr&oacute;nico">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <p class="txt-checkbox"> <input type="checkbox" name="condiciones" id="condiciones" class="required"> Estoy de acuerdo con los <a href="http://www.multivacaciones.com.co/site/index.php/viajero-del-mundo" target="_blank"> t&eacute;rminos y condiciones de este concurso </a> y la <a href="http://www.multivacaciones.com.co/site/index.php/viajero-del-mundo" target="_blank"> pol&iacute;tica de tratamiento de datos</a> de Hoteles Decameron Colombia S.A.S. </p>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <p class="txt-checkbox"> <input type="checkbox"  name="mayoredad" id="mayoredad" class="required"> Certifico que soy mayor de edad, los datos que he suministrado son ver&iacute;dicos y de mi propiedad. </p><!-- , adicional, he le&iacute;do los <a href="http://www.multivacaciones.com.co/site/index.php/viajero-del-mundo" target="_blank"> t&eacute;rminos y condiciones de este concurso </a>, estoy de acuerdo con ellos y cumplo con todas las condiciones para participar. -->
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" style="border:none;" class="btn-enviar">ENVIAR</button>
+                            </form>
                         </div>
-                        <div id="down"></div>
                     </div>
-                    <div class="col-md-12 col-xs-12 position-absoluta-coljuegos">
-                        <div class="logo-decameron-coljuegos">
-                            <img class="img-size" src="img/col-juegos-mobile.jpg" />
-                        </div>
+                    <div id="down"></div>
+                </div>
+                <div class="col-md-12 col-xs-12 position-absoluta-coljuegos">
+                    <div class="logo-decameron-coljuegos">
+                        <img class="img-size" src="img/col-juegos-mobile.jpg" />
                     </div>
                 </div>
             </div>
+        </div>
 
-
-            <!-- jQuery -->
-            <script src="js/jquery.js"></script>
-
-            <!-- Bootstrap Core JavaScript -->
-            <script src="js/bootstrap.min.js"></script>
-            <script src="js/controller.js"></script>
-            <script src="js/jquery.validate.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/controller.js"></script>
+        <script src="js/jquery.validate.js"></script>
 
     </body>
 
